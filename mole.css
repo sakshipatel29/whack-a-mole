@@ -4,10 +4,14 @@ body{
     background: url("/images/mario-bg.jpg");
     background-size: cover;
 }
+h1{
+    font-size: xx-large;
+    color: rgb(29, 8, 8);
+    font-style: normal;
+}
 #board {
     width: 540px;
     height: 540px;
-    /* background-color: green; */
 
     margin: 0 auto;
     display: flex;
@@ -29,4 +33,10 @@ body{
 #board div img{
     width: 100px;
     height: 100px;
+
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }

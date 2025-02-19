@@ -25,6 +25,9 @@ function getRandomTile(){
 }
 
 function setMole(){
+    if(gameOver){
+        return;
+    }
     if(currMoleTile){
         currMoleTile.innerHTML = "";
     }
@@ -40,6 +43,9 @@ function setMole(){
 }
 
 function setPlant(){
+    if(gameOver){
+        return;
+    }
     if(currPlantTile){
         currPlantTile.innerHTML = "";
     }
@@ -56,12 +62,15 @@ function setPlant(){
 }
 
 function selectTile() {
+    if(gameOver){
+        return;
+    }
     if(this == currMoleTile){
         score += 10;
         document.getElementById("score").innerHTML = score.toString();
     }
     else if(this == currPlantTile){
         document.getElementById("score").innerHTML = "GAME OVER :( " + score.toString();
-        gameOver(true);
+        gameOver = true;
     }
 }
